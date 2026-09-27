@@ -1,4 +1,5 @@
 import json
+import os
 import random
 from datetime import date
 from pathlib import Path
@@ -6,7 +7,7 @@ from pathlib import Path
 from flask import Flask, redirect, render_template, request, session, url_for
 
 app = Flask(__name__)
-app.secret_key = "change-this-to-a-random-secret-in-production"
+app.secret_key = os.environ.get("SECRET_KEY", "change-this-to-a-random-secret-in-production")
 
 DATA_PATH = Path(__file__).parent / "data" / "creators.json"
 with open(DATA_PATH, encoding="utf-8") as f:
@@ -150,4 +151,4 @@ def new_game():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=os.environ.get("FLASK_DEBUG") == "1")
