@@ -101,39 +101,71 @@ def compare(guess: dict, answer: dict) -> dict:
     }
 
 
-def reset_round():
+def reset_daily_round():
     session["game_date"] = date.today().isoformat()
     session["guesses"] = []
     session["game_over"] = False
     session["won"] = False
+    session["view"] = "daily"
+    session.pop("bonus_answer", None)
+    session.pop("bonus_guesses", None)
+    session.pop("bonus_game_over", None)
+    session.pop("bonus_won", None)
 
 
 def ensure_current_round():
-    """Start a fresh round automatically whenever the date has rolled over."""
+    """Start a fresh daily round automatically whenever the date has rolled
+    over, and drop any in-progress bonus round from a previous day."""
     if session.get("game_date") != date.today().isoformat():
-        reset_round()
+        reset_daily_round()
+
+
+def start_bonus_round():
+    """Pick a genuinely random creator, different from today's actual daily
+    answer, independent of the deterministic daily-order logic."""
+    today_answer_name = current_answer()["name"]
+    choices = [c["name"] for c in CREATORS if c["name"] != today_answer_name]
+    session["bonus_answer"] = random.choice(choices)
+    session["bonus_guesses"] = []
+    session["bonus_game_over"] = False
+    session["bonus_won"] = False
+    session["view"] = "bonus"
 
 
 @app.route("/")
 def index():
     ensure_current_round()
+    view = session.get("view", "daily")
 
-    guessed_names = {g["name"] for g in session["guesses"]}
+    if view == "bonus" and "bonus_answer" in session:
+        guesses = session["bonus_guesses"]
+        game_over = session["bonus_game_over"]
+        won = session["bonus_won"]
+        answer_name = session["bonus_answer"]
+    else:
+        view = "daily"
+        guesses = session["guesses"]
+        game_over = session["game_over"]
+        won = session["won"]
+        answer_name = current_answer()["name"]
+
+    guessed_names = {g["name"] for g in guesses}
     remaining_names = sorted(c["name"] for c in CREATORS if c["name"] not in guessed_names)
 
-    revealed_answer = None
-    if session.get("game_over") and not session.get("won"):
-        revealed_answer = current_answer()["name"]
+    revealed_answer = answer_name if (game_over and not won) else None
 
     return render_template(
         "index.html",
-        guesses=session["guesses"],
-        guess_count=len(session["guesses"]),
+        view=view,
+        guesses=guesses,
+        guess_count=len(guesses),
         max_guesses=MAX_GUESSES,
-        game_over=session.get("game_over", False),
-        won=session.get("won", False),
+        game_over=game_over,
+        won=won,
         names=remaining_names,
         revealed_answer=revealed_answer,
+        daily_won=session.get("won", False),
+        daily_game_over=session.get("game_over", False),
     )
 
 
@@ -141,7 +173,7 @@ def index():
 def guess():
     ensure_current_round()
 
-    if not session.get("game_over"):
+    if not session["game_over"]:
         name = request.form.get("creator_name", "")
         creator = find_creator(name)
         if creator and creator["name"] not in {g["name"] for g in session["guesses"]}:
@@ -155,6 +187,41 @@ def guess():
                 session["game_over"] = True
                 session["won"] = False
 
+    return redirect(url_for("index"))
+
+
+@app.route("/bonus/start", methods=["POST"])
+def bonus_start():
+    ensure_current_round()
+    start_bonus_round()
+    return redirect(url_for("index"))
+
+
+@app.route("/bonus/guess", methods=["POST"])
+def bonus_guess():
+    ensure_current_round()
+
+    if "bonus_answer" in session and not session["bonus_game_over"]:
+        name = request.form.get("creator_name", "")
+        creator = find_creator(name)
+        if creator and creator["name"] not in {g["name"] for g in session["bonus_guesses"]}:
+            answer = find_creator(session["bonus_answer"])
+            result = compare(creator, answer)
+            session["bonus_guesses"] = session["bonus_guesses"] + [result]
+            if result["won"]:
+                session["bonus_game_over"] = True
+                session["bonus_won"] = True
+            elif len(session["bonus_guesses"]) >= MAX_GUESSES:
+                session["bonus_game_over"] = True
+                session["bonus_won"] = False
+
+    return redirect(url_for("index"))
+
+
+@app.route("/view-daily", methods=["POST"])
+def view_daily():
+    ensure_current_round()
+    session["view"] = "daily"
     return redirect(url_for("index"))
 
 

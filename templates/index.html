@@ -12,12 +12,12 @@
 
 <header>
   <h1>TUBEDLE</h1>
-  <div class="tag">Guess the daily YouTuber in 6 tries</div>
+  <div class="tag">{{ "Bonus puzzle — guess the creator in 6 tries" if view == "bonus" else "Guess the daily YouTuber in 6 tries" }}</div>
   <div class="counter">Guesses left: <b>{{ max_guesses - guess_count }}</b></div>
 </header>
 
 {% if not game_over %}
-<form method="post" action="{{ url_for('guess') }}" class="search-wrap">
+<form method="post" action="{{ url_for('bonus_guess') if view == 'bonus' else url_for('guess') }}" class="search-wrap">
   <input list="creatorNames" name="creator_name" placeholder="Type a creator's name…" autocomplete="off" required>
   <datalist id="creatorNames">
     {% for n in names %}
@@ -55,8 +55,23 @@
 {% if game_over %}
 <div id="message">{{ "GOT IT 🎯" if won else "OUT OF GUESSES" }}</div>
 {% if revealed_answer %}
-<div id="answerReveal">Today's creator: {{ revealed_answer }}</div>
+<div id="answerReveal">{{ "Today's creator: " if view == "daily" else "The creator was: " }}{{ revealed_answer }}</div>
 {% endif %}
+
+<div class="post-game-actions">
+  {% if view == "daily" and won %}
+  <form method="post" action="{{ url_for('bonus_start') }}">
+    <button type="submit" class="go-btn">Play a bonus puzzle</button>
+  </form>
+  {% elif view == "bonus" %}
+  <form method="post" action="{{ url_for('bonus_start') }}">
+    <button type="submit" class="go-btn">Play a bonus puzzle</button>
+  </form>
+  <form method="post" action="{{ url_for('view_daily') }}">
+    <button type="submit" class="go-btn">View today's puzzle</button>
+  </form>
+  {% endif %}
+</div>
 {% endif %}
 
 </body>
