@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tubedle — Daily Creator Guess</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+  <h1>TUBEDLE</h1>
+  <div class="tag">Guess the daily YouTuber in 6 tries</div>
+  <div class="counter">Guesses left: <b>{{ max_guesses - guess_count }}</b></div>
+  <form method="post" action="{{ url_for('new_game') }}">
+    <button type="submit" id="newGameBtn">New game (practice)</button>
+  </form>
+</header>
+
+{% if not game_over %}
+<form method="post" action="{{ url_for('guess') }}" class="search-wrap">
+  <input list="creatorNames" name="creator_name" placeholder="Type a creator's name…" autocomplete="off" required>
+  <datalist id="creatorNames">
+    {% for n in names %}
+    <option value="{{ n }}">
+    {% endfor %}
+  </datalist>
+  <button type="submit" class="go-btn">Guess</button>
+</form>
+{% endif %}
+
+<div id="board-scroll">
+<table>
+  <thead>
+    <tr>
+      <th>Creator</th><th>Subs</th><th>Country</th><th>Gender</th>
+      <th>Started</th><th>Videos</th><th>Niche</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for g in guesses %}
+    <tr class="{{ 'won-row' if g.won else '' }}">
+      <td class="name">{{ g.name }}</td>
+      <td class="{{ g.subs.status }}">{{ g.subs.value }}M {{ g.subs.arrow }}</td>
+      <td class="{{ g.country.status }}">{{ g.country.value }}</td>
+      <td class="{{ g.gender.status }}">{{ g.gender.value }}</td>
+      <td class="{{ g.started.status }}">{{ g.started.value }} {{ g.started.arrow }}</td>
+      <td class="{{ g.videos.status }}">{{ g.videos.value }} {{ g.videos.arrow }}</td>
+      <td class="{{ g.niche.status }}">{{ g.niche.value }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% if game_over %}
+<div id="message">{{ "GOT IT 🎯" if won else "OUT OF GUESSES" }}</div>
+{% if revealed_answer %}
+<div id="answerReveal">Today's creator: {{ revealed_answer }}</div>
+{% endif %}
+{% endif %}
+
+</body>
+</html>
