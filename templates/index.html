@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tubedle — A Daily Creator Guessing Game</title>
+<title>Tubedle — Daily Creator Guess</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -14,9 +14,6 @@
   <h1>TUBEDLE</h1>
   <div class="tag">Guess the daily YouTuber in 6 tries</div>
   <div class="counter">Guesses left: <b>{{ max_guesses - guess_count }}</b></div>
-  <form method="post" action="{{ url_for('new_game') }}">
-    <button type="submit" id="newGameBtn">New Game</button>
-  </form>
 </header>
 
 {% if not game_over %}
