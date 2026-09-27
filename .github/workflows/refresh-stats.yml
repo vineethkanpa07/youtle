@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}    # lets you trigger it manually from the Actions tab
 
 permissions:
-  contents: write
+  contents: write   # lets the workflow push the updated creators.json back to the repo
 
 jobs:
   refresh:
@@ -31,4 +31,5 @@ jobs:
           git config user.email "actions@github.com"
           git add data/creators.json
           git diff --cached --quiet || git commit -m "Auto-refresh YouTube stats"
+          git pull --rebase -X ours origin main
           git push
