@@ -1,22 +1,164 @@
 [
-  {"name": "MrBeast", "subs": 400, "country": "USA", "gender": "Male", "started": 2012, "videos": 800, "niche": "Stunts"},
-  {"name": "PewDiePie", "subs": 111, "country": "Sweden", "gender": "Male", "started": 2010, "videos": 4700, "niche": "Commentary"},
-  {"name": "Mark Rober", "subs": 60, "country": "USA", "gender": "Male", "started": 2011, "videos": 170, "niche": "Science"},
-  {"name": "Kurzgesagt", "subs": 22, "country": "Germany", "gender": "Group", "started": 2013, "videos": 190, "niche": "Science"},
-  {"name": "Dude Perfect", "subs": 60, "country": "USA", "gender": "Group", "started": 2009, "videos": 300, "niche": "Sports"},
-  {"name": "Markiplier", "subs": 36, "country": "USA", "gender": "Male", "started": 2012, "videos": 5600, "niche": "Gaming"},
-  {"name": "Ninja", "subs": 24, "country": "USA", "gender": "Male", "started": 2011, "videos": 6000, "niche": "Gaming"},
-  {"name": "Logan Paul", "subs": 23, "country": "USA", "gender": "Male", "started": 2013, "videos": 700, "niche": "Vlog"},
-  {"name": "KSI", "subs": 24, "country": "UK", "gender": "Male", "started": 2009, "videos": 900, "niche": "Gaming"},
-  {"name": "Jacksepticeye", "subs": 30, "country": "Ireland", "gender": "Male", "started": 2012, "videos": 5500, "niche": "Gaming"},
-  {"name": "Emma Chamberlain", "subs": 12, "country": "USA", "gender": "Female", "started": 2017, "videos": 200, "niche": "Lifestyle"},
-  {"name": "MKBHD", "subs": 19, "country": "USA", "gender": "Male", "started": 2008, "videos": 1600, "niche": "Tech"},
-  {"name": "Casey Neistat", "subs": 12, "country": "USA", "gender": "Male", "started": 2010, "videos": 1000, "niche": "Vlog"},
-  {"name": "Lilly Singh", "subs": 15, "country": "Canada", "gender": "Female", "started": 2010, "videos": 900, "niche": "Comedy"},
-  {"name": "David Dobrik", "subs": 18, "country": "USA", "gender": "Male", "started": 2014, "videos": 900, "niche": "Vlog"},
-  {"name": "Good Mythical Morning", "subs": 18, "country": "USA", "gender": "Group", "started": 2012, "videos": 2000, "niche": "Comedy"},
-  {"name": "Smosh", "subs": 25, "country": "USA", "gender": "Group", "started": 2005, "videos": 1500, "niche": "Comedy"},
-  {"name": "Linus Tech Tips", "subs": 16, "country": "Canada", "gender": "Group", "started": 2008, "videos": 6000, "niche": "Tech"},
-  {"name": "James Charles", "subs": 23, "country": "USA", "gender": "Male", "started": 2015, "videos": 200, "niche": "Beauty"},
-  {"name": "NikkieTutorials", "subs": 14, "country": "Netherlands", "gender": "Female", "started": 2008, "videos": 600, "niche": "Beauty"}
+  {
+    "name": "MrBeast",
+    "subs": 518.0,
+    "country": "USA",
+    "started": 2012,
+    "videos": 1003,
+    "gender": "Male",
+    "niche": "Stunts"
+  },
+  {
+    "name": "PewDiePie",
+    "subs": 109.0,
+    "country": "JP",
+    "started": 2010,
+    "videos": 4666,
+    "gender": "Male",
+    "niche": "Commentary"
+  },
+  {
+    "name": "Mark Rober",
+    "subs": 83.1,
+    "country": "USA",
+    "started": 2011,
+    "videos": 270,
+    "gender": "Male",
+    "niche": "Science"
+  },
+  {
+    "name": "Kurzgesagt – In a Nutshell",
+    "subs": 25.6,
+    "country": "Germany",
+    "started": 2013,
+    "videos": 390,
+    "gender": "Group",
+    "niche": "Science"
+  },
+  {
+    "name": "Dude Perfect",
+    "subs": 62.7,
+    "country": "USA",
+    "started": 2009,
+    "videos": 639,
+    "gender": "Group",
+    "niche": "Sports"
+  },
+  {
+    "name": "Markiplier",
+    "subs": 38.9,
+    "country": "USA",
+    "started": 2012,
+    "videos": 5934,
+    "gender": "Male",
+    "niche": "Gaming"
+  },
+  {
+    "name": "Ninja",
+    "subs": 23.5,
+    "country": "USA",
+    "started": 2011,
+    "videos": 2657,
+    "gender": "Male",
+    "niche": "Gaming"
+  },
+  {
+    "name": "KSI",
+    "subs": 19.2,
+    "country": "UK",
+    "started": 2011,
+    "videos": 1553,
+    "gender": "Male",
+    "niche": "Gaming"
+  },
+  {
+    "name": "jacksepticeye",
+    "subs": 31.1,
+    "country": "Ireland",
+    "started": 2007,
+    "videos": 5344,
+    "gender": "Male",
+    "niche": "Gaming"
+  },
+  {
+    "name": "emma chamberlain",
+    "subs": 12.0,
+    "country": "USA",
+    "started": 2016,
+    "videos": 308,
+    "gender": "Female",
+    "niche": "Lifestyle"
+  },
+  {
+    "name": "Marques Brownlee",
+    "subs": 21.3,
+    "country": "USA",
+    "started": 2008,
+    "videos": 1853,
+    "gender": "Male",
+    "niche": "Tech"
+  },
+  {
+    "name": "Lilly Singh",
+    "subs": 14.1,
+    "country": "Unknown",
+    "started": 2010,
+    "videos": 1346,
+    "gender": "Female",
+    "niche": "Comedy"
+  },
+  {
+    "name": "David Dobrik",
+    "subs": 17.2,
+    "country": "USA",
+    "started": 2014,
+    "videos": 574,
+    "gender": "Male",
+    "niche": "Vlog"
+  },
+  {
+    "name": "Good Mythical Morning",
+    "subs": 19.7,
+    "country": "USA",
+    "started": 2008,
+    "videos": 4669,
+    "gender": "Group",
+    "niche": "Comedy"
+  },
+  {
+    "name": "Smosh",
+    "subs": 27.1,
+    "country": "USA",
+    "started": 2005,
+    "videos": 2326,
+    "gender": "Group",
+    "niche": "Comedy"
+  },
+  {
+    "name": "Linus Tech Tips",
+    "subs": 16.9,
+    "country": "Canada",
+    "started": 2008,
+    "videos": 7936,
+    "gender": "Group",
+    "niche": "Tech"
+  },
+  {
+    "name": "James Charles",
+    "subs": 23.7,
+    "country": "USA",
+    "started": 2015,
+    "videos": 731,
+    "gender": "Male",
+    "niche": "Beauty"
+  },
+  {
+    "name": "NikkieTutorials",
+    "subs": 15.4,
+    "country": "Netherlands",
+    "started": 2008,
+    "videos": 956,
+    "gender": "Female",
+    "niche": "Beauty"
+  }
 ]
