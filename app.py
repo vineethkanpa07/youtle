@@ -16,11 +16,28 @@ with open(DATA_PATH, encoding="utf-8") as f:
 EPOCH = date(2024, 1, 1)
 MAX_GUESSES = 6
 
+# Salt for the shuffle seed. Changing this reshuffles every cycle's order —
+# only do that intentionally (e.g. if you ever want to "reset" the sequence).
+SHUFFLE_SALT = "tubedle-v1"
+
 
 def daily_index() -> int:
-    """Same creator for everyone, changes once per day."""
+    """
+    Same creator for everyone, changes once per day, and the order isn't
+    just the raw list order. Each block of len(CREATORS) days is one
+    "cycle" — every creator appears exactly once per cycle (no repeats
+    within a cycle), but each cycle gets its own random-looking shuffle
+    that's deterministic (same for every player, reproducible from the
+    date) rather than truly random per request.
+    """
+    n = len(CREATORS)
     days_since_epoch = (date.today() - EPOCH).days
-    return days_since_epoch % len(CREATORS)
+    cycle_number = days_since_epoch // n
+    day_in_cycle = days_since_epoch % n
+
+    order = list(range(n))
+    random.Random(f"{SHUFFLE_SALT}-{cycle_number}").shuffle(order)
+    return order[day_in_cycle]
 
 
 def find_creator(name: str):
@@ -28,9 +45,6 @@ def find_creator(name: str):
 
 
 def current_answer():
-    if session.get("mode") == "practice":
-        name = session.get("practice_answer")
-        return find_creator(name) if name else CREATORS[daily_index()]
     return CREATORS[daily_index()]
 
 
@@ -87,21 +101,22 @@ def compare(guess: dict, answer: dict) -> dict:
     }
 
 
-def reset_round(mode="daily"):
-    session["mode"] = mode
+def reset_round():
+    session["game_date"] = date.today().isoformat()
     session["guesses"] = []
     session["game_over"] = False
     session["won"] = False
-    if mode == "practice":
-        current = session.get("practice_answer")
-        choices = [c["name"] for c in CREATORS if c["name"] != current] or [c["name"] for c in CREATORS]
-        session["practice_answer"] = random.choice(choices)
+
+
+def ensure_current_round():
+    """Start a fresh round automatically whenever the date has rolled over."""
+    if session.get("game_date") != date.today().isoformat():
+        reset_round()
 
 
 @app.route("/")
 def index():
-    if "guesses" not in session:
-        reset_round("daily")
+    ensure_current_round()
 
     guessed_names = {g["name"] for g in session["guesses"]}
     remaining_names = sorted(c["name"] for c in CREATORS if c["name"] not in guessed_names)
@@ -124,8 +139,7 @@ def index():
 
 @app.route("/guess", methods=["POST"])
 def guess():
-    if "guesses" not in session:
-        reset_round("daily")
+    ensure_current_round()
 
     if not session.get("game_over"):
         name = request.form.get("creator_name", "")
@@ -141,12 +155,6 @@ def guess():
                 session["game_over"] = True
                 session["won"] = False
 
-    return redirect(url_for("index"))
-
-
-@app.route("/new-game", methods=["POST"])
-def new_game():
-    reset_round("practice")
     return redirect(url_for("index"))
 
 
