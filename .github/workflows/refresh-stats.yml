@@ -19,7 +19,7 @@ jobs:
 
       - name: Fetch latest stats
         env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
         run: python scripts/fetch_youtube_stats.py
 
       - name: Commit updated data
