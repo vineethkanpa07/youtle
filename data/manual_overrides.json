@@ -1,0 +1,22 @@
+{
+  "@MrBeast": { "gender": "Male", "niche": "Stunts" },
+  "@PewDiePie": { "gender": "Male", "niche": "Commentary" },
+  "@MarkRober": { "gender": "Male", "niche": "Science" },
+  "@kurzgesagt": { "gender": "Group", "niche": "Science" },
+  "@DudePerfect": { "gender": "Group", "niche": "Sports" },
+  "@markiplier": { "gender": "Male", "niche": "Gaming" },
+  "@Ninja": { "gender": "Male", "niche": "Gaming" },
+  "@LoganPaul": { "gender": "Male", "niche": "Vlog" },
+  "@KSI": { "gender": "Male", "niche": "Gaming" },
+  "@jacksepticeye": { "gender": "Male", "niche": "Gaming" },
+  "@emmachamberlain": { "gender": "Female", "niche": "Lifestyle" },
+  "@mkbhd": { "gender": "Male", "niche": "Tech" },
+  "@CaseyNeistat": { "gender": "Male", "niche": "Vlog" },
+  "@lillysingh": { "gender": "Female", "niche": "Comedy" },
+  "@DavidDobrik": { "gender": "Male", "niche": "Vlog" },
+  "@GoodMythicalMorning": { "gender": "Group", "niche": "Comedy" },
+  "@smosh": { "gender": "Group", "niche": "Comedy" },
+  "@LinusTechTips": { "gender": "Group", "niche": "Tech" },
+  "@jamescharles": { "gender": "Male", "niche": "Beauty" },
+  "@NikkieTutorials": { "gender": "Female", "niche": "Beauty" }
+}
