@@ -4,7 +4,7 @@
     "subs": 518.0,
     "country": "USA",
     "started": 2012,
-    "videos": 1003,
+    "videos": 1004,
     "gender": "Male",
     "niche": "Stunts"
   },
@@ -37,7 +37,7 @@
   },
   {
     "name": "Dude Perfect",
-    "subs": 62.7,
+    "subs": 62.8,
     "country": "USA",
     "started": 2009,
     "videos": 639,
@@ -121,7 +121,7 @@
     "subs": 19.7,
     "country": "USA",
     "started": 2008,
-    "videos": 4669,
+    "videos": 4670,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -139,7 +139,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7936,
+    "videos": 7937,
     "gender": "Group",
     "niche": "Tech"
   },
