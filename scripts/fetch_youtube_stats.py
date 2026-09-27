@@ -90,7 +90,7 @@ def load_json(path: Path, default):
 
 def main():
     if not API_KEY:
-        print("Set YOUTUBE_API_KEY as an environment variable first.")
+        print("Set API_KEY as an environment variable first.")
         sys.exit(1)
 
     if not HANDLES_PATH.exists():
