@@ -42,7 +42,7 @@ COUNTRY_CODE_MAP = {
 
 # Only needed as a last resort, for creators whose channel doesn't set a
 # country at all — snippet.country is genuinely blank for a lot of channels.
-COUNTRY_FALLBACK = {}
+COUNTRY_FALLBACK = {"@lillysingh": "Canada"}
 
 
 def fetch_channel(handle: str) -> dict | None:
