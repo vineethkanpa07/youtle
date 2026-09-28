@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tubedle — Daily Creator Guess</title>
+<title>Youtle — Daily Creator Guess</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -11,7 +11,7 @@
 <body>
 
 <header>
-  <h1>TUBEDLE</h1>
+  <h1>YOUTLE</h1>
   <div class="tag">{{ "Bonus puzzle — guess the creator in 6 tries" if view == "bonus" else "Guess the daily YouTuber in 6 tries" }}</div>
   <div class="counter">Guesses left: <b>{{ max_guesses - guess_count }}</b></div>
 </header>
