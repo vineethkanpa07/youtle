@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 83.1,
+    "subs": 83.2,
     "country": "USA",
     "started": 2011,
     "videos": 270,
@@ -31,7 +31,7 @@
     "subs": 25.6,
     "country": "Germany",
     "started": 2013,
-    "videos": 390,
+    "videos": 391,
     "gender": "Group",
     "niche": "Science"
   },
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 639,
+    "videos": 640,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -76,7 +76,7 @@
     "subs": 31.1,
     "country": "Ireland",
     "started": 2007,
-    "videos": 5344,
+    "videos": 5345,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -94,7 +94,7 @@
     "subs": 21.3,
     "country": "USA",
     "started": 2008,
-    "videos": 1853,
+    "videos": 1854,
     "gender": "Male",
     "niche": "Tech"
   },
@@ -121,7 +121,7 @@
     "subs": 19.7,
     "country": "USA",
     "started": 2008,
-    "videos": 4671,
+    "videos": 4673,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -139,8 +139,8 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7937,
-    "gender": "Male",
+    "videos": 7938,
+    "gender": "Group",
     "niche": "Tech"
   },
   {
@@ -148,7 +148,7 @@
     "subs": 23.7,
     "country": "USA",
     "started": 2015,
-    "videos": 731,
+    "videos": 732,
     "gender": "Male",
     "niche": "Beauty"
   },
