@@ -191,8 +191,6 @@ def start_bonus_round():
     session["bonus_won"] = False
     session["view"] = "bonus"
 
-
-@app.route("/")
 def render_game(view):
     if view == "bonus":
         guesses = session["bonus_guesses"]
