@@ -3,8 +3,8 @@ import os
 import random
 from datetime import date
 from pathlib import Path
-
 from flask import Flask, redirect, render_template, request, session, url_for
+from zoneinfo import ZoneInfo
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "change-this-to-a-random-secret-in-production")
@@ -15,6 +15,20 @@ with open(DATA_PATH, encoding="utf-8") as f:
 
 EPOCH = date(2024, 1, 1)
 MAX_GUESSES = 6
+
+PUZZLE_START = date(2026, 9, 27)  # Sept 27 = #1, so today (Sept 30) = #4
+
+MONTHS = ["Jan.", "Feb.", "March", "April", "May", "June",
+          "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."]
+
+def puzzle_number() -> int:
+    return (date.today() - PUZZLE_START).days + 1
+
+def pretty_date(d: date) -> str:
+    return f"{d.strftime('%A')}, {MONTHS[d.month - 1]} {d.day}, {d.year}"
+
+def today() -> date:
+    return datetime.now(ZoneInfo("America/New_York")).date()
 
 # Salt for the shuffle seed. Changing this reshuffles every cycle's order —
 # only do that intentionally (e.g. if you ever want to "reset" the sequence).
@@ -166,6 +180,8 @@ def index():
         revealed_answer=revealed_answer,
         daily_won=session.get("won", False),
         daily_game_over=session.get("game_over", False),
+        today_label=pretty_date(date.today()),
+        puzzle_number=puzzle_number(),
     )
 
 

@@ -12,8 +12,8 @@
 
 <header>
   <h1>YOUTLE</h1>
-  <div class="tag">{{ "Bonus puzzle — guess the creator in 6 tries" if view == "bonus" else "Guess the daily YouTuber in 6 tries" }}</div>
-  <div class="counter">Guesses left: <b>{{ max_guesses - guess_count }}</b></div>
+  <div class="date-line">{{ today_label }}</div>
+  <div class="puzzle-num">{{ "Bonus puzzle" if view == "bonus" else "Youtle #" ~ puzzle_number }}</div>
 </header>
 
 {% if not game_over %}

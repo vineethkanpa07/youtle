@@ -21,6 +21,12 @@ h1{
 .tag{ color:var(--ink-dim); font-size:0.85rem; margin-top:6px; }
 .counter{ font-size:0.8rem; color:var(--ink-dim); margin-top:10px; }
 .counter b{ color:var(--gold); }
+.tag{ color:var(--ink-dim); font-size:0.85rem; margin-top:6px; }
+.counter{ font-size:0.8rem; color:var(--ink-dim); margin-top:10px; }
+.counter b{ color:var(--gold); }
+.date-line{ color:var(--ink-dim); font-size:0.8rem; margin-top:8px; letter-spacing:0.5px; }
+.puzzle-num{ font-family:'Bebas Neue',sans-serif; color:var(--ink); font-size:1.3rem; letter-spacing:1px; margin-top:2px; }
+
 #newGameBtn{
   margin-top:14px; background:var(--panel2); color:var(--gold); border:1px solid var(--gold);
   padding:8px 18px; border-radius:4px; font-family:'IBM Plex Mono',monospace;
