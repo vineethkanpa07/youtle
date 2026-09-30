@@ -1,7 +1,7 @@
 import json
 import os
 import random
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from flask import Flask, redirect, render_template, request, session, url_for
 from zoneinfo import ZoneInfo
@@ -45,7 +45,7 @@ def daily_index() -> int:
     date) rather than truly random per request.
     """
     n = len(CREATORS)
-    days_since_epoch = (date.today() - EPOCH).days
+    days_since_epoch = (today() - EPOCH).days
     cycle_number = days_since_epoch // n
     day_in_cycle = days_since_epoch % n
 
@@ -116,7 +116,7 @@ def compare(guess: dict, answer: dict) -> dict:
 
 
 def reset_daily_round():
-    session["game_date"] = date.today().isoformat()
+    session["game_date"] = today().isoformat()
     session["guesses"] = []
     session["game_over"] = False
     session["won"] = False
@@ -130,7 +130,7 @@ def reset_daily_round():
 def ensure_current_round():
     """Start a fresh daily round automatically whenever the date has rolled
     over, and drop any in-progress bonus round from a previous day."""
-    if session.get("game_date") != date.today().isoformat():
+    if session.get("game_date") != today().isoformat():
         reset_daily_round()
 
 
@@ -180,7 +180,7 @@ def index():
         revealed_answer=revealed_answer,
         daily_won=session.get("won", False),
         daily_game_over=session.get("game_over", False),
-        today_label=pretty_date(date.today()),
+        today_label=pretty_date(today()),
         puzzle_number=puzzle_number(),
     )
 

@@ -24,7 +24,13 @@ h1{
 .tag{ color:var(--ink-dim); font-size:0.85rem; margin-top:6px; }
 .counter{ font-size:0.8rem; color:var(--ink-dim); margin-top:10px; }
 .counter b{ color:var(--gold); }
-.date-line{ color:var(--ink-dim); font-size:0.8rem; margin-top:8px; letter-spacing:0.5px; }
+.date-line{
+  font-family:'Fraunces', Georgia, serif;
+  font-style:italic;
+  color:var(--ink-dim);
+  font-size:1rem;
+  margin-top:10px;
+}
 .puzzle-num{ font-family:'Bebas Neue',sans-serif; color:var(--ink); font-size:1.3rem; letter-spacing:1px; margin-top:2px; }
 
 #newGameBtn{
