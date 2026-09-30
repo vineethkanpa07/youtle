@@ -11,7 +11,7 @@
   {
     "name": "PewDiePie",
     "subs": 109.0,
-    "country": "JP",
+    "country": "Japan",
     "started": 2010,
     "videos": 4666,
     "gender": "Male",
@@ -22,7 +22,7 @@
     "subs": 83.2,
     "country": "USA",
     "started": 2011,
-    "videos": 270,
+    "videos": 271,
     "gender": "Male",
     "niche": "Science"
   },
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 641,
+    "videos": 642,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -63,11 +63,20 @@
     "niche": "Gaming"
   },
   {
+    "name": "Logan Paul",
+    "subs": 23.6,
+    "country": "USA",
+    "started": 2015,
+    "videos": 808,
+    "gender": "Male",
+    "niche": "Vlog"
+  },
+  {
     "name": "KSI",
     "subs": 19.2,
     "country": "UK",
     "started": 2011,
-    "videos": 1553,
+    "videos": 1554,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -94,9 +103,18 @@
     "subs": 21.3,
     "country": "USA",
     "started": 2008,
-    "videos": 1854,
+    "videos": 1855,
     "gender": "Male",
     "niche": "Tech"
+  },
+  {
+    "name": "CaseyNeistat",
+    "subs": 12.7,
+    "country": "USA",
+    "started": 2010,
+    "videos": 1146,
+    "gender": "Male",
+    "niche": "Vlog"
   },
   {
     "name": "Lilly Singh",

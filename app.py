@@ -5,6 +5,9 @@ from datetime import date, datetime
 from pathlib import Path
 from flask import Flask, redirect, render_template, request, session, url_for
 from zoneinfo import ZoneInfo
+import threading
+import time
+from scripts.fetch_youtube_stats import fetch_channel, load_json, HANDLES_PATH, OVERRIDES_PATH
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "change-this-to-a-random-secret-in-production")
@@ -12,6 +15,48 @@ app.secret_key = os.environ.get("SECRET_KEY", "change-this-to-a-random-secret-in
 DATA_PATH = Path(__file__).parent / "data" / "creators.json"
 with open(DATA_PATH, encoding="utf-8") as f:
     CREATORS = json.load(f)
+
+
+REFRESH_SECONDS = 6 * 60 * 60  # every 6 hours
+
+
+def refresh_creators():
+    global CREATORS
+    handles = [
+        line.strip()
+        for line in HANDLES_PATH.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.strip().startswith("#")
+    ]
+    overrides = load_json(OVERRIDES_PATH, {})
+
+    fresh = []
+    for handle in handles:
+        try:
+            data = fetch_channel(handle)
+        except Exception as e:
+            print(f"[refresh] {handle} failed: {e} — keeping old stats")
+            return
+        if data is None:
+            return
+        override = overrides.get(handle, {})
+        data["gender"] = override.get("gender", "Unknown")
+        data["niche"] = override.get("niche", "Unknown")
+        del data["handle"]
+        fresh.append(data)
+
+    if len(fresh) == len(CREATORS):
+        CREATORS = fresh
+        print(f"[refresh] updated stats for {len(fresh)} creators")
+
+
+def refresh_loop():
+    while True:
+        refresh_creators()
+        time.sleep(REFRESH_SECONDS)
+
+
+if os.environ.get("API_KEY"):
+    threading.Thread(target=refresh_loop, daemon=True).start()
 
 EPOCH = date(2024, 1, 1)
 MAX_GUESSES = 6
@@ -70,6 +115,7 @@ CONTINENTS = {
     "Germany": "Europe",
     "Sweden": "Europe",
     "Netherlands": "Europe",
+    "Japan": "Asia"
 }
 
 
@@ -147,17 +193,13 @@ def start_bonus_round():
 
 
 @app.route("/")
-def index():
-    ensure_current_round()
-    view = session.get("view", "daily")
-
-    if view == "bonus" and "bonus_answer" in session:
+def render_game(view):
+    if view == "bonus":
         guesses = session["bonus_guesses"]
         game_over = session["bonus_game_over"]
         won = session["bonus_won"]
         answer_name = session["bonus_answer"]
     else:
-        view = "daily"
         guesses = session["guesses"]
         game_over = session["game_over"]
         won = session["won"]
@@ -165,7 +207,6 @@ def index():
 
     guessed_names = {g["name"] for g in guesses}
     remaining_names = sorted(c["name"] for c in CREATORS if c["name"] not in guessed_names)
-
     revealed_answer = answer_name if (game_over and not won) else None
 
     return render_template(
@@ -184,6 +225,18 @@ def index():
         puzzle_number=puzzle_number(),
     )
 
+@app.route("/")
+def index():
+    ensure_current_round()
+    return render_game("daily")
+
+
+@app.route("/bonus")
+def bonus():
+    ensure_current_round()
+    if "bonus_answer" not in session:
+        return redirect(url_for("index"))
+    return render_game("bonus")
 
 @app.route("/guess", methods=["POST"])
 def guess():
@@ -210,8 +263,7 @@ def guess():
 def bonus_start():
     ensure_current_round()
     start_bonus_round()
-    return redirect(url_for("index"))
-
+    return redirect(url_for("bonus"))
 
 @app.route("/bonus/guess", methods=["POST"])
 def bonus_guess():
@@ -231,8 +283,7 @@ def bonus_guess():
                 session["bonus_game_over"] = True
                 session["bonus_won"] = False
 
-    return redirect(url_for("index"))
-
+    return redirect(url_for("bonus"))
 
 @app.route("/view-daily", methods=["POST"])
 def view_daily():
