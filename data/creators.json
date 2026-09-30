@@ -1,7 +1,7 @@
 [
   {
     "name": "MrBeast",
-    "subs": 518.0,
+    "subs": 519.0,
     "country": "USA",
     "started": 2012,
     "videos": 1004,
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 640,
+    "videos": 641,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -58,7 +58,7 @@
     "subs": 23.5,
     "country": "USA",
     "started": 2011,
-    "videos": 2657,
+    "videos": 2658,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -73,7 +73,7 @@
   },
   {
     "name": "jacksepticeye",
-    "subs": 31.1,
+    "subs": 31.2,
     "country": "Ireland",
     "started": 2007,
     "videos": 5345,
@@ -121,7 +121,7 @@
     "subs": 19.7,
     "country": "USA",
     "started": 2008,
-    "videos": 4673,
+    "videos": 4675,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -130,7 +130,7 @@
     "subs": 27.1,
     "country": "USA",
     "started": 2005,
-    "videos": 2326,
+    "videos": 2327,
     "gender": "Group",
     "niche": "Comedy"
   },
