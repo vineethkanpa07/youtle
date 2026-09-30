@@ -25,10 +25,10 @@ h1{
 .counter{ font-size:0.8rem; color:var(--ink-dim); margin-top:10px; }
 .counter b{ color:var(--gold); }
 .date-line{
-  font-family:'Fraunces', Georgia, serif;
-  font-style:italic;
+  font-family:'Bebas Neue', sans-serif;
   color:var(--ink-dim);
-  font-size:1rem;
+  font-size:1.1rem;
+  letter-spacing:1px;
   margin-top:10px;
 }
 .puzzle-num{ font-family:'Bebas Neue',sans-serif; color:var(--ink); font-size:1.3rem; letter-spacing:1px; margin-top:2px; }
