@@ -38,6 +38,7 @@ COUNTRY_CODE_MAP = {
     "DE": "Germany",
     "SE": "Sweden",
     "NL": "Netherlands",
+    "JP": "Japan"
 }
 
 # Only needed as a last resort, for creators whose channel doesn't set a
@@ -124,9 +125,14 @@ def main():
         creators.append(data)
 
         time.sleep(0.1)  # stay polite to the API, not strictly required
+    
+    if not creators:
+        print("\nNo creators fetched — leaving existing creators.json untouched.")
+        sys.exit(1)
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+
         json.dump(creators, f, indent=2, ensure_ascii=False)
 
     print(f"\nWrote {len(creators)} creators to {OUTPUT_PATH}")
