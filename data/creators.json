@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 83.3,
+    "subs": 83.4,
     "country": "USA",
     "started": 2011,
     "videos": 271,
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 642,
+    "videos": 643,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -49,7 +49,7 @@
     "subs": 38.9,
     "country": "USA",
     "started": 2012,
-    "videos": 5934,
+    "videos": 5935,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -139,16 +139,16 @@
     "subs": 19.7,
     "country": "USA",
     "started": 2008,
-    "videos": 4676,
+    "videos": 4678,
     "gender": "Group",
     "niche": "Comedy"
   },
   {
     "name": "Smosh",
-    "subs": 27.1,
+    "subs": 27.2,
     "country": "USA",
     "started": 2005,
-    "videos": 2327,
+    "videos": 2328,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7938,
+    "videos": 7939,
     "gender": "Group",
     "niche": "Tech"
   },
