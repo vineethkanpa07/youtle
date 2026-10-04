@@ -4,7 +4,7 @@
     "subs": 519.0,
     "country": "USA",
     "started": 2012,
-    "videos": 1004,
+    "videos": 1005,
     "gender": "Male",
     "niche": "Stunts"
   },
@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 83.4,
+    "subs": 83.5,
     "country": "USA",
     "started": 2011,
     "videos": 271,
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 644,
+    "videos": 645,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -136,10 +136,10 @@
   },
   {
     "name": "Good Mythical Morning",
-    "subs": 19.7,
+    "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4678,
+    "videos": 4679,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7941,
+    "videos": 7942,
     "gender": "Group",
     "niche": "Tech"
   },
@@ -166,7 +166,7 @@
     "subs": 23.7,
     "country": "USA",
     "started": 2015,
-    "videos": 733,
+    "videos": 734,
     "gender": "Male",
     "niche": "Beauty"
   },
