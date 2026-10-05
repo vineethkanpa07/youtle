@@ -8,6 +8,7 @@ from zoneinfo import ZoneInfo
 import threading
 import time
 from scripts.fetch_youtube_stats import fetch_channel, load_json, HANDLES_PATH, OVERRIDES_PATH
+import redis
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "change-this-to-a-random-secret-in-production")
@@ -15,6 +16,35 @@ app.secret_key = os.environ.get("SECRET_KEY", "change-this-to-a-random-secret-in
 DATA_PATH = Path(__file__).parent / "data" / "creators.json"
 with open(DATA_PATH, encoding="utf-8") as f:
     CREATORS = json.load(f)
+
+
+# --- Redis setup ---------------------------------------------------------
+# If REDIS_URL isn't set (e.g. running locally without Redis), r is None and
+# every Redis call is skipped. If Redis goes down, the game keeps working.
+REDIS_URL = os.environ.get("REDIS_URL")
+r = redis.from_url(REDIS_URL, decode_responses=True) if REDIS_URL else None
+
+
+def redis_call(fn):
+    """Run a Redis command; skip quietly if Redis isn't set up or is down."""
+    if r is None:
+        return None
+    try:
+        return fn()
+    except redis.RedisError as e:
+        print(f"[redis] {e}")
+        return None
+
+
+# On startup, use the last refreshed stats if Redis has them. The length check
+# matters: daily_index() depends on len(CREATORS), so a different-sized list
+# would reshuffle the answers.
+cached = redis_call(lambda: r.get("creators:latest"))
+if cached:
+    cached = json.loads(cached)
+    if len(cached) == len(CREATORS):
+        CREATORS = cached
+        print(f"[redis] loaded cached stats for {len(CREATORS)} creators")
 
 
 REFRESH_SECONDS = 6 * 60 * 60  # every 6 hours
@@ -46,6 +76,7 @@ def refresh_creators():
 
     if len(fresh) == len(CREATORS):
         CREATORS = fresh
+        redis_call(lambda: r.set("creators:latest", json.dumps(fresh)))
         print(f"[refresh] updated stats for {len(fresh)} creators")
 
 
@@ -67,7 +98,8 @@ MONTHS = ["Jan.", "Feb.", "March", "April", "May", "June",
           "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."]
 
 def puzzle_number() -> int:
-    return (date.today() - PUZZLE_START).days + 1
+    # Uses Eastern time (today()) so the number rolls over with the answer
+    return (today() - PUZZLE_START).days + 1
 
 def pretty_date(d: date) -> str:
     return f"{d.strftime('%A')}, {MONTHS[d.month - 1]} {d.day}, {d.year}"
@@ -180,6 +212,21 @@ def ensure_current_round():
         reset_daily_round()
 
 
+def record_play():
+    """Count each browser once per day when it opens the daily puzzle."""
+    d = today().isoformat()
+    if session.get("counted_date") != d:
+        session["counted_date"] = d
+        redis_call(lambda: r.incr(f"plays:{d}"))
+
+
+def record_result():
+    """Record how a finished daily game ended: number of guesses, or X for a loss."""
+    d = today().isoformat()
+    result_key = str(len(session["guesses"])) if session["won"] else "X"
+    redis_call(lambda: r.hincrby(f"results:{d}", result_key, 1))
+
+
 def start_bonus_round():
     """Pick a genuinely random creator, different from today's actual daily
     answer, independent of the deterministic daily-order logic."""
@@ -226,6 +273,7 @@ def render_game(view):
 @app.route("/")
 def index():
     ensure_current_round()
+    record_play()
     return render_game("daily")
 
 
@@ -253,6 +301,10 @@ def guess():
             elif len(session["guesses"]) >= MAX_GUESSES:
                 session["game_over"] = True
                 session["won"] = False
+
+            # Runs once per player: only on the guess that ends the game
+            if session["game_over"]:
+                record_result()
 
     return redirect(url_for("index"))
 
