@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Youtle stats — #{{ puzzle_number }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    /* Stats-page-only styles; colors and fonts come from style.css */
+    .stats-wrap { width: 100%; max-width: 480px; }
+    .summary { display: flex; justify-content: center; gap: 36px; margin: 8px 0 28px; }
+    .summary div { text-align: center; }
+    .summary .num { font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: var(--gold); line-height: 1; }
+    .summary .label { font-size: 0.8rem; color: var(--ink-dim); margin-top: 4px; }
+    h2 { font-size: 0.95rem; font-weight: 600; margin: 0 0 12px; }
+    .bar-row { display: grid; grid-template-columns: 1.5rem 1fr; align-items: center; gap: 10px; margin-bottom: 6px; }
+    .bar-row .key { text-align: right; color: var(--ink-dim); font-size: 0.85rem; }
+    .bar { background: var(--gold); color: var(--bg); font-size: 0.8rem; font-weight: 600;
+           padding: 3px 8px; text-align: right; min-width: 1.8rem; border-radius: 3px; }
+    .bar.empty { background: transparent; color: var(--ink-dim); text-align: left; padding-left: 0; }
+    .note { color: var(--ink-dim); font-size: 0.85rem; text-align: center; margin: 24px 0; }
+    .back { display: block; text-align: center; margin-top: 28px; color: var(--gold); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Youtle</h1>
+    <div class="tag">Puzzle #{{ puzzle_number }} · {{ today_label }}</div>
+  </header>
+
+  <main class="stats-wrap">
+    {% if not available %}
+      <p class="note">Stats aren't available right now. The game still works.</p>
+    {% else %}
+      <div class="summary">
+        <div><div class="num">{{ plays }}</div><div class="label">played today</div></div>
+        <div><div class="num">{{ finished }}</div><div class="label">finished</div></div>
+        <div><div class="num">{{ win_rate if win_rate is not none else "–" }}{% if win_rate is not none %}%{% endif %}</div><div class="label">solved</div></div>
+      </div>
+
+      <h2>How today's games ended</h2>
+      {% if finished == 0 %}
+        <p class="note">No one has finished today's puzzle yet. Be the first.</p>
+      {% else %}
+        {% for key, count in dist %}
+          <div class="bar-row">
+            <div class="key">{{ key }}</div>
+            {% if count > 0 %}
+              <div class="bar" style="width: {{ (100 * count / top)|round(1) }}%">{{ count }}</div>
+            {% else %}
+              <div class="bar empty">0</div>
+            {% endif %}
+          </div>
+        {% endfor %}
+        <p class="note">Numbers are guesses needed to solve. X means not solved in {{ dist|length - 1 }}.</p>
+      {% endif %}
+    {% endif %}
+
+    <a class="back" href="{{ url_for('index') }}">Back to today's puzzle</a>
+  </main>
+</body>
+</html>

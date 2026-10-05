@@ -335,6 +335,33 @@ def bonus_guess():
 
     return redirect(url_for("bonus"))
 
+@app.route("/stats")
+def stats():
+    """Public stats page: today's plays and how everyone's games ended."""
+    d = today().isoformat()
+    plays = int(redis_call(lambda: r.get(f"plays:{d}")) or 0)
+    raw = redis_call(lambda: r.hgetall(f"results:{d}")) or {}
+
+    # Rows for 1..MAX_GUESSES guesses, then X for games that weren't solved
+    keys = [str(i) for i in range(1, MAX_GUESSES + 1)] + ["X"]
+    dist = [(k, int(raw.get(k, 0))) for k in keys]
+    finished = sum(count for _, count in dist)
+    wins = finished - int(raw.get("X", 0))
+    top = max([count for _, count in dist] + [1])
+
+    return render_template(
+        "stats.html",
+        available=r is not None,
+        plays=plays,
+        finished=finished,
+        win_rate=round(100 * wins / finished) if finished else None,
+        dist=dist,
+        top=top,
+        today_label=pretty_date(today()),
+        puzzle_number=puzzle_number(),
+    )
+
+
 @app.route("/view-daily", methods=["POST"])
 def view_daily():
     ensure_current_round()
