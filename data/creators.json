@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 83.6,
+    "subs": 83.7,
     "country": "USA",
     "started": 2011,
     "videos": 271,
@@ -28,7 +28,7 @@
   },
   {
     "name": "Kurzgesagt – In a Nutshell",
-    "subs": 25.6,
+    "subs": 25.7,
     "country": "Germany",
     "started": 2013,
     "videos": 392,
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 646,
+    "videos": 647,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -49,7 +49,7 @@
     "subs": 38.9,
     "country": "USA",
     "started": 2012,
-    "videos": 5937,
+    "videos": 5938,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -100,7 +100,7 @@
   },
   {
     "name": "Marques Brownlee",
-    "subs": 21.3,
+    "subs": 21.4,
     "country": "USA",
     "started": 2008,
     "videos": 1856,
@@ -121,7 +121,7 @@
     "subs": 14.1,
     "country": "Canada",
     "started": 2010,
-    "videos": 1346,
+    "videos": 1339,
     "gender": "Female",
     "niche": "Comedy"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4682,
+    "videos": 4683,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -148,7 +148,7 @@
     "subs": 27.2,
     "country": "USA",
     "started": 2005,
-    "videos": 2328,
+    "videos": 2329,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7944,
+    "videos": 7946,
     "gender": "Group",
     "niche": "Tech"
   },
@@ -166,7 +166,7 @@
     "subs": 23.7,
     "country": "USA",
     "started": 2015,
-    "videos": 734,
+    "videos": 736,
     "gender": "Male",
     "niche": "Beauty"
   },
