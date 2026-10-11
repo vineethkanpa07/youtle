@@ -1,7 +1,7 @@
 [
   {
     "name": "MrBeast",
-    "subs": 520.0,
+    "subs": 521.0,
     "country": "USA",
     "started": 2012,
     "videos": 1006,
@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 83.8,
+    "subs": 83.9,
     "country": "USA",
     "started": 2011,
     "videos": 272,
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 649,
+    "videos": 650,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -58,7 +58,7 @@
     "subs": 23.5,
     "country": "USA",
     "started": 2011,
-    "videos": 2660,
+    "videos": 2661,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7948,
+    "videos": 7949,
     "gender": "Group",
     "niche": "Tech"
   },
