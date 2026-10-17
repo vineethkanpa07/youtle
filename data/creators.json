@@ -4,7 +4,7 @@
     "subs": 521.0,
     "country": "USA",
     "started": 2012,
-    "videos": 1006,
+    "videos": 1007,
     "gender": "Male",
     "niche": "Stunts"
   },
@@ -40,13 +40,13 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 654,
+    "videos": 655,
     "gender": "Group",
     "niche": "Sports"
   },
   {
     "name": "Markiplier",
-    "subs": 39.0,
+    "subs": 38.9,
     "country": "USA",
     "started": 2012,
     "videos": 5942,
@@ -82,7 +82,7 @@
   },
   {
     "name": "jacksepticeye",
-    "subs": 31.2,
+    "subs": 31.1,
     "country": "Ireland",
     "started": 2007,
     "videos": 5346,
@@ -103,7 +103,7 @@
     "subs": 21.4,
     "country": "USA",
     "started": 2008,
-    "videos": 1858,
+    "videos": 1859,
     "gender": "Male",
     "niche": "Tech"
   },
@@ -130,7 +130,7 @@
     "subs": 17.2,
     "country": "USA",
     "started": 2014,
-    "videos": 574,
+    "videos": 575,
     "gender": "Male",
     "niche": "Vlog"
   },
@@ -148,7 +148,7 @@
     "subs": 27.2,
     "country": "USA",
     "started": 2005,
-    "videos": 2332,
+    "videos": 2334,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7957,
+    "videos": 7958,
     "gender": "Group",
     "niche": "Tech"
   },
@@ -166,7 +166,7 @@
     "subs": 23.7,
     "country": "USA",
     "started": 2015,
-    "videos": 738,
+    "videos": 739,
     "gender": "Male",
     "niche": "Beauty"
   },
