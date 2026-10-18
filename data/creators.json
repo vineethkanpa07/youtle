@@ -1,10 +1,10 @@
 [
   {
     "name": "MrBeast",
-    "subs": 521.0,
+    "subs": 522.0,
     "country": "USA",
     "started": 2012,
-    "videos": 1007,
+    "videos": 1008,
     "gender": "Male",
     "niche": "Stunts"
   },
@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 84.1,
+    "subs": 84.2,
     "country": "USA",
     "started": 2011,
     "videos": 272,
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 655,
+    "videos": 656,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -49,7 +49,7 @@
     "subs": 38.9,
     "country": "USA",
     "started": 2012,
-    "videos": 5942,
+    "videos": 5943,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -58,7 +58,7 @@
     "subs": 23.5,
     "country": "USA",
     "started": 2011,
-    "videos": 2661,
+    "videos": 2662,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -67,7 +67,7 @@
     "subs": 23.6,
     "country": "USA",
     "started": 2015,
-    "videos": 810,
+    "videos": 811,
     "gender": "Male",
     "niche": "Vlog"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4695,
+    "videos": 4696,
     "gender": "Group",
     "niche": "Comedy"
   },
