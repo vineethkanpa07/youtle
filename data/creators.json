@@ -1,7 +1,7 @@
 [
   {
     "name": "MrBeast",
-    "subs": 522.0,
+    "subs": 523.0,
     "country": "USA",
     "started": 2012,
     "videos": 1008,
@@ -13,7 +13,7 @@
     "subs": 109.0,
     "country": "Japan",
     "started": 2010,
-    "videos": 4667,
+    "videos": 4668,
     "gender": "Male",
     "niche": "Commentary"
   },
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 660,
+    "videos": 661,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -58,7 +58,7 @@
     "subs": 23.5,
     "country": "USA",
     "started": 2011,
-    "videos": 2662,
+    "videos": 2663,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -121,7 +121,7 @@
     "subs": 14.1,
     "country": "Canada",
     "started": 2010,
-    "videos": 1348,
+    "videos": 1350,
     "gender": "Female",
     "niche": "Comedy"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4702,
+    "videos": 4703,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -148,7 +148,7 @@
     "subs": 27.2,
     "country": "USA",
     "started": 2005,
-    "videos": 2334,
+    "videos": 2336,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7961,
+    "videos": 7963,
     "gender": "Group",
     "niche": "Tech"
   },
@@ -166,7 +166,7 @@
     "subs": 23.7,
     "country": "USA",
     "started": 2015,
-    "videos": 741,
+    "videos": 742,
     "gender": "Male",
     "niche": "Beauty"
   },
