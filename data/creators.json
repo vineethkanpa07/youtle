@@ -4,7 +4,7 @@
     "subs": 523.0,
     "country": "USA",
     "started": 2012,
-    "videos": 1008,
+    "videos": 1009,
     "gender": "Male",
     "niche": "Stunts"
   },
@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 84.4,
+    "subs": 84.5,
     "country": "USA",
     "started": 2011,
     "videos": 273,
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 661,
+    "videos": 662,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -76,7 +76,7 @@
     "subs": 19.2,
     "country": "UK",
     "started": 2011,
-    "videos": 1556,
+    "videos": 1557,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4703,
+    "videos": 4704,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,16 +157,16 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7963,
+    "videos": 7964,
     "gender": "Group",
     "niche": "Tech"
   },
   {
     "name": "James Charles",
-    "subs": 23.7,
+    "subs": 23.6,
     "country": "USA",
     "started": 2015,
-    "videos": 742,
+    "videos": 744,
     "gender": "Male",
     "niche": "Beauty"
   },
