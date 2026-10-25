@@ -19,19 +19,19 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 84.5,
+    "subs": 84.6,
     "country": "USA",
     "started": 2011,
-    "videos": 273,
+    "videos": 274,
     "gender": "Male",
     "niche": "Science"
   },
   {
     "name": "Kurzgesagt – In a Nutshell",
-    "subs": 25.7,
+    "subs": 25.8,
     "country": "Germany",
     "started": 2013,
-    "videos": 394,
+    "videos": 395,
     "gender": "Group",
     "niche": "Science"
   },
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 662,
+    "videos": 663,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -58,7 +58,7 @@
     "subs": 23.5,
     "country": "USA",
     "started": 2011,
-    "videos": 2663,
+    "videos": 2664,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4704,
+    "videos": 4705,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7964,
+    "videos": 7965,
     "gender": "Group",
     "niche": "Tech"
   },
@@ -166,7 +166,7 @@
     "subs": 23.6,
     "country": "USA",
     "started": 2015,
-    "videos": 744,
+    "videos": 743,
     "gender": "Male",
     "niche": "Beauty"
   },
