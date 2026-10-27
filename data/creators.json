@@ -49,7 +49,7 @@
     "subs": 39.0,
     "country": "USA",
     "started": 2012,
-    "videos": 5945,
+    "videos": 5946,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -67,7 +67,7 @@
     "subs": 23.6,
     "country": "USA",
     "started": 2015,
-    "videos": 811,
+    "videos": 812,
     "gender": "Male",
     "niche": "Vlog"
   },
@@ -76,7 +76,7 @@
     "subs": 19.2,
     "country": "UK",
     "started": 2011,
-    "videos": 1557,
+    "videos": 1558,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -118,10 +118,10 @@
   },
   {
     "name": "Lilly Singh",
-    "subs": 14.2,
+    "subs": 14.1,
     "country": "Canada",
     "started": 2010,
-    "videos": 1350,
+    "videos": 1351,
     "gender": "Female",
     "niche": "Comedy"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4706,
+    "videos": 4708,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7965,
+    "videos": 7966,
     "gender": "Group",
     "niche": "Tech"
   },
@@ -166,7 +166,7 @@
     "subs": 23.6,
     "country": "USA",
     "started": 2015,
-    "videos": 743,
+    "videos": 745,
     "gender": "Male",
     "niche": "Beauty"
   },
