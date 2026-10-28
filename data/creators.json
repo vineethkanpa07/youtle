@@ -1,7 +1,7 @@
 [
   {
     "name": "MrBeast",
-    "subs": 523.0,
+    "subs": 524.0,
     "country": "USA",
     "started": 2012,
     "videos": 1009,
@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 84.8,
+    "subs": 84.9,
     "country": "USA",
     "started": 2011,
     "videos": 274,
@@ -31,7 +31,7 @@
     "subs": 25.8,
     "country": "Germany",
     "started": 2013,
-    "videos": 395,
+    "videos": 396,
     "gender": "Group",
     "niche": "Science"
   },
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 664,
+    "videos": 665,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -49,7 +49,7 @@
     "subs": 39.0,
     "country": "USA",
     "started": 2012,
-    "videos": 5946,
+    "videos": 5947,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -73,7 +73,7 @@
   },
   {
     "name": "KSI",
-    "subs": 19.2,
+    "subs": 19.3,
     "country": "UK",
     "started": 2011,
     "videos": 1558,
@@ -85,7 +85,7 @@
     "subs": 31.1,
     "country": "Ireland",
     "started": 2007,
-    "videos": 5346,
+    "videos": 5347,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -103,7 +103,7 @@
     "subs": 21.4,
     "country": "USA",
     "started": 2008,
-    "videos": 1861,
+    "videos": 1862,
     "gender": "Male",
     "niche": "Tech"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4708,
+    "videos": 4709,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -148,7 +148,7 @@
     "subs": 27.2,
     "country": "USA",
     "started": 2005,
-    "videos": 2336,
+    "videos": 2337,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7966,
+    "videos": 7967,
     "gender": "Group",
     "niche": "Tech"
   },
@@ -166,7 +166,7 @@
     "subs": 23.6,
     "country": "USA",
     "started": 2015,
-    "videos": 745,
+    "videos": 746,
     "gender": "Male",
     "niche": "Beauty"
   },
