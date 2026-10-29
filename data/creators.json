@@ -19,10 +19,10 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 84.9,
+    "subs": 85.0,
     "country": "USA",
     "started": 2011,
-    "videos": 274,
+    "videos": 275,
     "gender": "Male",
     "niche": "Science"
   },
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 665,
+    "videos": 666,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -49,7 +49,7 @@
     "subs": 39.0,
     "country": "USA",
     "started": 2012,
-    "videos": 5947,
+    "videos": 5948,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -103,7 +103,7 @@
     "subs": 21.4,
     "country": "USA",
     "started": 2008,
-    "videos": 1862,
+    "videos": 1863,
     "gender": "Male",
     "niche": "Tech"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4709,
+    "videos": 4711,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7967,
+    "videos": 7970,
     "gender": "Group",
     "niche": "Tech"
   },
