@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 85.0,
+    "subs": 85.1,
     "country": "USA",
     "started": 2011,
     "videos": 275,
@@ -31,7 +31,7 @@
     "subs": 25.8,
     "country": "Germany",
     "started": 2013,
-    "videos": 396,
+    "videos": 397,
     "gender": "Group",
     "niche": "Science"
   },
@@ -67,7 +67,7 @@
     "subs": 23.6,
     "country": "USA",
     "started": 2015,
-    "videos": 812,
+    "videos": 813,
     "gender": "Male",
     "niche": "Vlog"
   },
@@ -85,7 +85,7 @@
     "subs": 31.1,
     "country": "Ireland",
     "started": 2007,
-    "videos": 5347,
+    "videos": 5348,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -121,7 +121,7 @@
     "subs": 14.1,
     "country": "Canada",
     "started": 2010,
-    "videos": 1351,
+    "videos": 1353,
     "gender": "Female",
     "niche": "Comedy"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4711,
+    "videos": 4713,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -148,7 +148,7 @@
     "subs": 27.2,
     "country": "USA",
     "started": 2005,
-    "videos": 2337,
+    "videos": 2338,
     "gender": "Group",
     "niche": "Comedy"
   },
