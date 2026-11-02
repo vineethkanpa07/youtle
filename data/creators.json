@@ -1,7 +1,7 @@
 [
   {
     "name": "MrBeast",
-    "subs": 524.0,
+    "subs": 525.0,
     "country": "USA",
     "started": 2012,
     "videos": 1011,
@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 85.3,
+    "subs": 85.4,
     "country": "USA",
     "started": 2011,
     "videos": 276,
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 668,
+    "videos": 669,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -112,7 +112,7 @@
     "subs": 12.7,
     "country": "USA",
     "started": 2010,
-    "videos": 1148,
+    "videos": 1147,
     "gender": "Male",
     "niche": "Vlog"
   },
@@ -121,7 +121,7 @@
     "subs": 14.2,
     "country": "Canada",
     "started": 2010,
-    "videos": 1354,
+    "videos": 1355,
     "gender": "Female",
     "niche": "Comedy"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4714,
+    "videos": 4716,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7972,
+    "videos": 7973,
     "gender": "Group",
     "niche": "Tech"
   },
@@ -166,7 +166,7 @@
     "subs": 23.7,
     "country": "USA",
     "started": 2015,
-    "videos": 747,
+    "videos": 749,
     "gender": "Male",
     "niche": "Beauty"
   },
