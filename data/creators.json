@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 85.5,
+    "subs": 85.6,
     "country": "USA",
     "started": 2011,
     "videos": 276,
@@ -40,7 +40,7 @@
     "subs": 62.8,
     "country": "USA",
     "started": 2009,
-    "videos": 670,
+    "videos": 671,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -49,7 +49,7 @@
     "subs": 39.0,
     "country": "USA",
     "started": 2012,
-    "videos": 5949,
+    "videos": 5950,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -58,7 +58,7 @@
     "subs": 23.5,
     "country": "USA",
     "started": 2011,
-    "videos": 2665,
+    "videos": 2666,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -103,7 +103,7 @@
     "subs": 21.4,
     "country": "USA",
     "started": 2008,
-    "videos": 1863,
+    "videos": 1864,
     "gender": "Male",
     "niche": "Tech"
   },
@@ -118,10 +118,10 @@
   },
   {
     "name": "Lilly Singh",
-    "subs": 14.2,
+    "subs": 14.1,
     "country": "Canada",
     "started": 2010,
-    "videos": 1354,
+    "videos": 1355,
     "gender": "Female",
     "niche": "Comedy"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4718,
+    "videos": 4719,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -148,7 +148,7 @@
     "subs": 27.2,
     "country": "USA",
     "started": 2005,
-    "videos": 2341,
+    "videos": 2342,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -163,10 +163,10 @@
   },
   {
     "name": "James Charles",
-    "subs": 23.7,
+    "subs": 23.6,
     "country": "USA",
     "started": 2015,
-    "videos": 747,
+    "videos": 750,
     "gender": "Male",
     "niche": "Beauty"
   },
@@ -175,7 +175,7 @@
     "subs": 15.4,
     "country": "Netherlands",
     "started": 2008,
-    "videos": 958,
+    "videos": 959,
     "gender": "Female",
     "niche": "Beauty"
   }
