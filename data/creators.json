@@ -1,7 +1,7 @@
 [
   {
     "name": "MrBeast",
-    "subs": 525.0,
+    "subs": 526.0,
     "country": "USA",
     "started": 2012,
     "videos": 1012,
@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 85.9,
+    "subs": 86.0,
     "country": "USA",
     "started": 2011,
     "videos": 276,
@@ -37,10 +37,10 @@
   },
   {
     "name": "Dude Perfect",
-    "subs": 62.8,
+    "subs": 62.9,
     "country": "USA",
     "started": 2009,
-    "videos": 674,
+    "videos": 675,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -49,7 +49,7 @@
     "subs": 39.0,
     "country": "USA",
     "started": 2012,
-    "videos": 5952,
+    "videos": 5953,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4725,
+    "videos": 4726,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7981,
+    "videos": 7982,
     "gender": "Group",
     "niche": "Tech"
   },
