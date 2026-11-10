@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 86.0,
+    "subs": 86.1,
     "country": "USA",
     "started": 2011,
     "videos": 276,
@@ -55,10 +55,10 @@
   },
   {
     "name": "Ninja",
-    "subs": 23.5,
+    "subs": 23.4,
     "country": "USA",
     "started": 2011,
-    "videos": 2666,
+    "videos": 2667,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -121,7 +121,7 @@
     "subs": 14.1,
     "country": "Canada",
     "started": 2010,
-    "videos": 1356,
+    "videos": 1357,
     "gender": "Female",
     "niche": "Comedy"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4726,
+    "videos": 4728,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7982,
+    "videos": 7983,
     "gender": "Group",
     "niche": "Tech"
   },
@@ -166,7 +166,7 @@
     "subs": 23.6,
     "country": "USA",
     "started": 2015,
-    "videos": 752,
+    "videos": 753,
     "gender": "Male",
     "niche": "Beauty"
   },
