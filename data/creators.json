@@ -4,7 +4,7 @@
     "subs": 526.0,
     "country": "USA",
     "started": 2012,
-    "videos": 1013,
+    "videos": 1014,
     "gender": "Male",
     "niche": "Stunts"
   },
@@ -19,7 +19,7 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 86.4,
+    "subs": 86.5,
     "country": "USA",
     "started": 2011,
     "videos": 277,
@@ -31,7 +31,7 @@
     "subs": 25.8,
     "country": "Germany",
     "started": 2013,
-    "videos": 399,
+    "videos": 400,
     "gender": "Group",
     "niche": "Science"
   },
@@ -40,7 +40,7 @@
     "subs": 62.9,
     "country": "USA",
     "started": 2009,
-    "videos": 679,
+    "videos": 681,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -58,7 +58,7 @@
     "subs": 23.4,
     "country": "USA",
     "started": 2011,
-    "videos": 2667,
+    "videos": 2668,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4735,
+    "videos": 4736,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -148,7 +148,7 @@
     "subs": 27.2,
     "country": "USA",
     "started": 2005,
-    "videos": 2347,
+    "videos": 2345,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,7 +157,7 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 7990,
+    "videos": 7992,
     "gender": "Group",
     "niche": "Tech"
   },
