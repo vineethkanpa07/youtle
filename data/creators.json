@@ -13,16 +13,16 @@
     "subs": 109.0,
     "country": "Japan",
     "started": 2010,
-    "videos": 4669,
+    "videos": 4670,
     "gender": "Male",
     "niche": "Commentary"
   },
   {
     "name": "Mark Rober",
-    "subs": 87.1,
+    "subs": 87.3,
     "country": "USA",
     "started": 2011,
-    "videos": 278,
+    "videos": 279,
     "gender": "Male",
     "niche": "Science"
   },
@@ -31,7 +31,7 @@
     "subs": 25.8,
     "country": "Germany",
     "started": 2013,
-    "videos": 402,
+    "videos": 403,
     "gender": "Group",
     "niche": "Science"
   },
@@ -40,7 +40,7 @@
     "subs": 62.9,
     "country": "USA",
     "started": 2009,
-    "videos": 687,
+    "videos": 689,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -85,7 +85,7 @@
     "subs": 31.1,
     "country": "Ireland",
     "started": 2007,
-    "videos": 5358,
+    "videos": 5359,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -103,7 +103,7 @@
     "subs": 21.5,
     "country": "USA",
     "started": 2008,
-    "videos": 1867,
+    "videos": 1869,
     "gender": "Male",
     "niche": "Tech"
   },
@@ -121,7 +121,7 @@
     "subs": 14.2,
     "country": "Canada",
     "started": 2010,
-    "videos": 1369,
+    "videos": 1371,
     "gender": "Female",
     "niche": "Comedy"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4750,
+    "videos": 4752,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,13 +157,13 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 8011,
+    "videos": 8013,
     "gender": "Group",
     "niche": "Tech"
   },
   {
     "name": "James Charles",
-    "subs": 23.6,
+    "subs": 23.7,
     "country": "USA",
     "started": 2015,
     "videos": 761,
