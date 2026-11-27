@@ -19,10 +19,10 @@
   },
   {
     "name": "Mark Rober",
-    "subs": 87.3,
+    "subs": 87.5,
     "country": "USA",
     "started": 2011,
-    "videos": 279,
+    "videos": 280,
     "gender": "Male",
     "niche": "Science"
   },
@@ -40,7 +40,7 @@
     "subs": 62.9,
     "country": "USA",
     "started": 2009,
-    "videos": 689,
+    "videos": 690,
     "gender": "Group",
     "niche": "Sports"
   },
@@ -49,7 +49,7 @@
     "subs": 39.0,
     "country": "USA",
     "started": 2012,
-    "videos": 5960,
+    "videos": 5961,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -85,7 +85,7 @@
     "subs": 31.1,
     "country": "Ireland",
     "started": 2007,
-    "videos": 5359,
+    "videos": 5360,
     "gender": "Male",
     "niche": "Gaming"
   },
@@ -139,7 +139,7 @@
     "subs": 19.8,
     "country": "USA",
     "started": 2008,
-    "videos": 4752,
+    "videos": 4754,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -148,7 +148,7 @@
     "subs": 27.2,
     "country": "USA",
     "started": 2005,
-    "videos": 2351,
+    "videos": 2352,
     "gender": "Group",
     "niche": "Comedy"
   },
@@ -157,13 +157,13 @@
     "subs": 16.9,
     "country": "Canada",
     "started": 2008,
-    "videos": 8013,
+    "videos": 8014,
     "gender": "Group",
     "niche": "Tech"
   },
   {
     "name": "James Charles",
-    "subs": 23.7,
+    "subs": 23.6,
     "country": "USA",
     "started": 2015,
     "videos": 761,
